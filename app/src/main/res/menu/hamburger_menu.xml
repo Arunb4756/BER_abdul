@@ -8,6 +8,9 @@
             android:id="@+id/nav_home"
             android:title="@string/group1_Home" />
         <item
+            android:id="@+id/nav_reports"
+            android:title="@string/reports"/>
+        <item
             android:id="@+id/nav_calc"
             android:title="@string/group1_calc">
             <menu>
@@ -17,7 +20,6 @@
                 <item
                     android:id="@+id/SI_calc"
                     android:title="@string/interest_calculator" />
-
 
             </menu>
         </item>
