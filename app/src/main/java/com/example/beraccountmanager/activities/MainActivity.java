@@ -33,14 +33,8 @@ public class MainActivity extends BaseActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavDrawer = (NavigationView) findViewById(R.id.drawer_layout);
         mDrawerToggle = setupDrawerToggle();
-
-        // Tie DrawerLayout events to the ActionBarToggle
         mDrawerLayout.addDrawerListener(mDrawerToggle);
-
-        // Setup drawer view
         setupDrawerContent(mNavDrawer);
-
-        // Select TodayFragment on app start by default
         loadTodayFragment();
     }
     @Override
@@ -51,7 +45,6 @@ public class MainActivity extends BaseActivity {
             if (!(currentFragment instanceof TodayFragment)) {
                 loadTodayFragment();
             } else {
-                // If current fragment is TodayFragment then exit
                 super.onBackPressed();
             }
         } }
@@ -65,10 +58,7 @@ public class MainActivity extends BaseActivity {
         }
 
         insertFragment(fragment);
-
-        // Highlight the selected item
         mNavDrawer.setCheckedItem(navDrawerCheckedItemId);
-        // Set action bar title
         setTitle(toolbarTitle);
     }
     private void loadTodayFragment() {
